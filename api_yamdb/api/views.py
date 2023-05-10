@@ -28,10 +28,11 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from rest_framework_simplejwt.tokens import AccessToken
-
-from api.permissions import IsAdmin
 from reviews.models import Categories, Genre, Review, Title
 from users.models import User
+
+from api.permissions import IsAdmin
+
 from .filters import TitleFilter
 from .permissions import (IsAdminOrReadOnly,
                           IsAuthorOrIsModeratorOrAdminOrReadOnly)
