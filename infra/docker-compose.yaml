@@ -9,6 +9,10 @@ services:
       - ./.env
       
   web:
+    web:
+    image: yaroslavbutorin/yamdb:latest
+    ports:
+      - "8000:8000"      
     build:
          context: ../api_yamdb/
          dockerfile: ./Dockerfile
