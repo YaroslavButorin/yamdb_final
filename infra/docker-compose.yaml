@@ -11,15 +11,12 @@ services:
   web:
     web:
     image: yaroslavbutorin/yamdb:latest
-    ports:
-      - "8000:8000"      
-    build:
-         context: ../api_yamdb/
-         dockerfile: ./Dockerfile
     restart: always
     volumes:
       - static_value:/app/static/
       - media_value:/app/media/
+    ports:
+      - "8000:8000"    
     depends_on:
       - db
     env_file:
