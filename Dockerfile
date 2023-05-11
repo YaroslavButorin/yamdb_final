@@ -1,6 +1,5 @@
 FROM python:3.7-slim
-WORKDIR /app
-COPY /api_yamdb/requirements.txt /app
-RUN pip install -r requirements.txt
-COPY . /app
-CMD gunicorn api_yamdb.api_yamdb.wsgi:application --bind 0.0.0.0:5000
+COPY ./ /app
+RUN pip install -r /app/requirements.txt
+WORKDIR /app/api_yamdb/
+CMD gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:5000
