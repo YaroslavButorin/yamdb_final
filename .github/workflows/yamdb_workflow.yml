@@ -65,8 +65,8 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           password: ${{ secrets.PASSWORD }}
-          key: ${{ secrets.SSH_KEY }}
-          passphrase: ${{ secrets.PASSPHRASE }}
+          #key: ${{ secrets.SSH_KEY }}
+          #passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo docker stop $(sudo docker ps -a -q)
             sudo docker-compose up --build -d
