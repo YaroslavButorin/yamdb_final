@@ -9,7 +9,6 @@ services:
       - ./.env
       
   web:
-    web:
     image: yaroslavbutorin/yamdb:latest
     restart: always
     volumes:
@@ -24,14 +23,12 @@ services:
       
   nginx:
     image: nginx:1.21.3-alpine
-    ports:
-      - "80:80"
-
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - static_value:/var/html/static/
       - media_value:/var/html/media/
-
+    ports:
+      - "80:80"
     depends_on:
       - web
 
