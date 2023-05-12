@@ -68,9 +68,12 @@ jobs:
             echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
-            pwd
-            sudo docker-compose -f /root/docker-compose.yaml up -d 
- 
+            sudo docker-compose -f /root/docker-compose.yaml up -d
+            sudo docker-compose exec -T web python manage.py makemigrations
+            sudo docker-compose exec -T web python manage.py migrate
+            sudo docker-compose exec -T web python manage.py collectstatic --no-input
+            sudo docker-compose exec -T web python manage.py import_csv
+            
  
   send_message:
     runs-on: ubuntu-latest
