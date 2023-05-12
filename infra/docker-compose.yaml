@@ -7,6 +7,8 @@ services:
       - /var/lib/postgresql/data/
     env_file:
       - ./.env
+    restart:
+      always
       
   web:
     image: yaroslavbutorin/yamdb:latest
@@ -33,5 +35,6 @@ services:
       - web
 
 volumes:
+  postgres_data:
   static_value:
   media_value:
