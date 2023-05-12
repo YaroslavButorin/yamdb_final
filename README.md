@@ -1,5 +1,7 @@
 # Групповой проект YaMDb. Python-разработчик (бекенд) (Яндекс.Практикум)
 ![example workflow](https://github.com/YaroslavButorin/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
+Проверить работоспособность проекта можно по адресу: http://yaroslav1234321.fvds.ru:5000/admin/
 # Описание 
 
   Проект YaMDb собирает отзывы (Review) пользователей на произведения (Title). 
