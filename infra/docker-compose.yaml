@@ -11,7 +11,7 @@ services:
       always
       
   web:
-    image: yaroslavbutorin/yamdb:latest
+    image: yaroslavbutorin/yamldb:latest
     restart: always
     volumes:
       - static_value:/app/static/
