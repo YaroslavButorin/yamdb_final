@@ -69,7 +69,7 @@ jobs:
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
             pwd
-            sudo docker-compose /home/root/docker-compose.yaml up -d 
+            sudo docker-compose -f /home/root/docker-compose.yaml up -d 
  
  
   send_message:
