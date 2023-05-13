@@ -40,45 +40,12 @@
 * django-filter=23.1
 
 
-## Запуск проекта локально:
-* Клонировать репозиторий и перейти в него в командной строке.
-* Установите и активируйте виртуальное окружение c учетом версии Python 3.7
-
-```
-python -3.9 -m venv venv
-source venv/Scripts/activate
-python -m pip install --upgrade pip
-pip install -r requirements.txt
-```
-Далее миграции
-```
-python manage.py migrate
-```
-
-* Если есть необходимость, заполняем базу тестовыми данными:
-
-Запустить командной:
-
-```
-python manage.py import_csv
-```
-
-* Далее необходимо создать супер пользователя
-
-```
-python manage.py createsuperuser
-```
-* Запуск проекта
-
-```
-python manage.py runserver
-```
-
 ## Запуск проекта через Docker:
+Предварительно добавить все secret переменные в репозиторий гитхаба.
 Для запуска необходимо из корневой папки проекта ввести в консоль(bash или zsh) команду:
 ```
 docker-compose up --build
-
+```
 
 
 ## Пользовательские роли
